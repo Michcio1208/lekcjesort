@@ -32,12 +32,12 @@ for i in range (10):
 
 #4
 c=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
-d=int(input("podaj 1 kolumne do zamiany: "))
-e=int(input("podaj 2 kolumne do zamiany: "))
+d=int(input("podaj 1 wiersz do zamiany: "))
+e=int(input("podaj 2 wiersz do zamiany: "))
 for j in range(4):
     c[d][j],c[e][j] = c[e][j],c[d][j]
-f=int(input("podaj 1 wiersz do zamiany: "))
-g=int(input("podaj 1 wiersz do zamiany: "))
+f=int(input("podaj 1 kolumne do zamiany: "))
+g=int(input("podaj 2 kolumne do zamiany: "))
 
 for i in range(4):
     c[i][f],c[i][g] = c[i][g],c[i][f]

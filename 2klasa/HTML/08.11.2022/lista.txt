@@ -1,0 +1,33 @@
+<html>
+<body>
+<head>
+<style>
+.p1{
+color:orange;
+font-size:200%;
+font-family:courier;
+text-align:center;
+}
+.p2{
+color:red;
+font-size: 150%;
+font-family:courier;
+text-align:right;
+} 
+
+</style>
+</head>
+<p class="p1"><a href="https://game.fm/parkhaus-790/?scoresType=game">link do strony</a> gra1</p>
+<p class="p1"><a href="https://game.fm/league-driving-825/?scoresType=game">link do strony</a> gra2</p>
+<p class="p1"><a href="https://poki.pl/g/noob-archer">link do strony</a> gra3</p>
+<p class="p1"><a href="https://poki.pl/g/moto-x3m">link do strony</a> gra4</p>
+<p class="p1"><a href="https://poki.pl/g/subway-surfers">link do strony</a> gra5</p>
+
+
+
+
+
+
+
+</body>
+</html>

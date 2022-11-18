@@ -1,0 +1,29 @@
+<style>
+p {font-family:courier;
+font-size:20px;
+color:green;
+}
+
+.p1 {
+border-top: 2px dotted red;
+}
+.p2 {
+border-left: 2px groove blue;
+}
+.p3 {
+border-bottom: 2px dashed green;
+}
+.p4 {
+border: 2px double orange;
+}
+.p5 {
+border: 2px dashed red;
+}
+
+table,tr,td{
+border: 2px dotted purple;
+border-collapse:collapse;
+
+}
+
+</style>

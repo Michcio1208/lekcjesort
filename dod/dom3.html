@@ -14,15 +14,19 @@
 </style>
 <script>
 var tab= new Array()
-for(let i=0;i<tab.length;i++){
-let tab[i]=parseInt(prompt("podaj element: "))
+for(let i=0;i<10;i++){
+let tab[i]=parseInt(prompt("podaje licznbe: "))
 
 }document.write(tab)
 
-function wypisz(){
-    var liczba1=parseInt(document.getElementById("pole").value)
-    var liczba2=parseInt(document.getElementById("pole2").value)
-}
+
+</script>
+<script>
+    function wypisz(){
+        var liczba1=parseInt(document.getElementById("pole").value)
+        var liczba2=parseInt(document.getElementById("pole2").value)
+    }
+
 
 </script>
     <body>
@@ -30,13 +34,14 @@ function wypisz(){
 
     <p class="p1">le bruh jam</p>
  <p class="p2"> le bruh james</p>
+ <br> <br> <br>
 <form> <!--***-->
   <input type="text" id="pole">
   <input type="text" id="pole2">
   <input type="submit" value="dalej" onclick="wypisz()">
 </form>
-    
+<br> <br> <br>
     
     
     </body>
-    </html>>
+    </html>

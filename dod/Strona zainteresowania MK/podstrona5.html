@@ -1,0 +1,35 @@
+<HEAD><p align= "center"> <u><b> Logowanie(skrypt)</u></b>
+    <script>
+        function haslo(){
+            let a=(document.getElementById("pole").value)
+            let b=(document.getElementById("pole1").value)
+            if(a=="login" && b=="password")
+            {
+            document.write("oke")
+            }
+            else if(a.length<=4)
+            {
+              document.write("tf2?")
+            }
+            else if(a=="" && b=="")
+            {
+              alert('tf?')
+              document.write("tf?")
+            }
+           else{
+              document.write("not oke")
+            }
+             }
+    </script>
+    <label>
+        login
+     </label>
+     <input type="text" id="pole">
+       <br>
+       <label>
+        password
+     </label>
+       <input type="password" id="pole1"><!--kropki na hasle-->
+       <br>
+       <input type="submit" value="dalej" onclick="haslo()">
+     </form>

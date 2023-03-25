@@ -1,4 +1,7 @@
 <HEAD><p align= "center"> <u><b> Logowanie(skrypt)</u></b>
+    
+    
+    <body bgcolor="pink">
     <script>
         function haslo(){
             let a=(document.getElementById("pole").value)
@@ -9,18 +12,22 @@
             }
             else if(a.length<=4)
             {
-              document.write("tf2?")
+              document.write("tf2?, odswież stronę")
             }
             else if(a=="" && b=="")
             {
               alert('tf?')
-              document.write("tf?")
+              document.write("tf?, odswież stronę")
             }
            else{
-              document.write("not oke")
+              document.write("not oke, odswież stronę")
             }
              }
     </script>
+    <br>
+    <br>
+    <br>
+
     <label>
         login
      </label>
@@ -33,3 +40,4 @@
        <br>
        <input type="submit" value="dalej" onclick="haslo()">
      </form>
+    </body>

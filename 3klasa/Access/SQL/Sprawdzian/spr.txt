@@ -1,0 +1,110 @@
+create table TypKonta(
+Id int primary key,
+nazwa varchar(45),
+)
+
+
+create table uzytkownik(
+Id int primary key,
+login varchar(45),
+haslo varchar(45),
+imie varchar(45),
+nazwisko varchar(45),
+email varchar(45),
+telefon varchar(45),
+typ kontaId int references TypKonta(Id),
+)
+
+create table usluga(
+Id int primary key,
+nazwa varchar(45),
+opis varchar(45),
+Data wystawienia DATE,
+uzytkownikid int references uzytkownik(Id)
+)
+
+create table harmonogram(
+Id int primary key,
+Data DATE,
+GodzPoczatek double,
+GodzKoniec double,
+czydostepne bit,
+uslugaid int references usluga(id)
+)
+
+create table uzytkownikharmonogram(
+UzytkownikId int references uzytkownik(id),
+HarmonogramId int references harmonogram(id)
+)
+
+
+2. 
+create table kategorie(
+kategorieid int primary key,
+nazwa kategori varchar(30)
+)
+
+create table film(
+filmid int primary key,
+kategorieid references kategorie(kategorieid)
+tytul varchar(30), 
+
+)
+create table aktorzy(
+aktorzyid id int primary key,
+imie varchar(30),
+nazwisko varchar(30)
+)
+
+
+create table filmaktorzy(
+filmid int references filmy(filmid),
+aktorzyid int references aktorzy(aktorzyid) 
+)
+
+
+3. 
+
+create table Uczniowie(
+UczenId int primary key,
+nazwiskoImie varchar(30),
+DataUr DATE,
+MiejsceUr varchar(30),
+kod int,
+miejscowosc varchar(30),
+ulicaNr varchar(30)
+)
+
+create table Przedmioty(
+PrzedmiotId int primary key,
+nazwapelna varchar(30),
+nazwaskrot varchar(20)
+)
+
+create table Nauczyciele(
+NauczycielId int primary key,
+nazwiskoImie varchar(30),
+wyksztalcenie varchar(30),
+Stazpracyvarchar(30),
+telfon varchar(30),
+email varchar(30)
+)
+
+create table OcenyDefinicje(
+OcenaDefId int primary key,
+nazwapelna varchar(30),
+nazwaskrot varchar(20)
+)
+
+create table Oceny(
+OcenaId int primary key,
+uczenid int references Uczniowie(UczenId), 
+przedmiotid int references Przedmioty(PrzedmiotId),
+Nauczycielid int references Nauczyciele(NauczycielId),
+OcenaDefId int references OcenaDefinicje(OcenaDefId),
+data DATE
+)
+
+
+insert into oceny values(1,1,1,1,1,null)
+

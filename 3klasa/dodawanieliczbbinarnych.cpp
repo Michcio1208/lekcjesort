@@ -1,6 +1,6 @@
 #include <iostream>
+using namespace std;
 #include <cmath>
-#include "dodawanieliczbbinarnych.h"
 
 int binaryToDecimal(const std::string& binary) {
     int decimal = 0;
@@ -32,7 +32,7 @@ int main() {
     char format;
 
     
-    cout << "Enter the format of the first number (b for binary, d for decimal): ";
+    cout << "Podaj typ wpisywanej liczby (b dla binarnych, d dla dziesietncyh): ";
     cin >> format;
 
     

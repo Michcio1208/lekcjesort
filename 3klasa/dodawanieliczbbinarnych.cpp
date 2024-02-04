@@ -2,7 +2,7 @@
 using namespace std;
 #include <cmath>
 
-int binaryToDecimal(const string& binary) {
+int bnad(const string & binary) {
     int decimal = 0;
     int power = 0;
 
@@ -16,7 +16,7 @@ int binaryToDecimal(const string& binary) {
     return decimal;
 }
 
-string decimalToBinary(int decimal) {
+string dnab(int decimal) {
     string binary;
 
     while (decimal > 0) {
@@ -45,8 +45,8 @@ int main() {
     int decimal1, decimal2;
 
     if (format == 'b') {
-        decimal1 = binaryToDecimal(input1);
-        decimal2 = binaryToDecimal(input2);
+        decimal1 = bnad(input1);
+        decimal2 = bnad(input2);
     } else if (format == 'd') {
         decimal1 = stoi(input1);
         decimal2 = stoi(input2);
@@ -58,7 +58,7 @@ int main() {
     
     int sum = decimal1 + decimal2;
 
-    cout << "Suma w postaci binarnej: " << decimalToBinary(sum) <<endl;
+    cout << "Suma w postaci binarnej: " << dnab(sum) <<endl;
     cout << "Sum suma w postaci dziesietnej:  " << sum << endl;
 
     return 0;

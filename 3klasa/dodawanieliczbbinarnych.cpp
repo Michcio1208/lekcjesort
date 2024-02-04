@@ -2,13 +2,13 @@
 using namespace std;
 #include <cmath>
 
-int binaryToDecimal(const std::string& binary) {
+int binaryToDecimal(const string& binary) {
     int decimal = 0;
     int power = 0;
 
     for (int i = binary.length() - 1; i >= 0; --i) {
         if (binary[i] == '1') {
-            decimal += static_cast<int>(std::pow(2, power));
+            decimal += static_cast<int>(pow(2, power));
         }
         ++power;
     }
@@ -58,7 +58,7 @@ int main() {
     
     int sum = decimal1 + decimal2;
 
-    cout << "Suma w postaci binarnej: " << decimalToBinary(sum) << std::endl;
+    cout << "Suma w postaci binarnej: " << decimalToBinary(sum) <<endl;
     cout << "Sum suma w postaci dziesietnej:  " << sum << endl;
 
     return 0;

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
+#include "dodawanieliczbbinarnych.h"
 
-// Function to convert binary string to decimal
 int binaryToDecimal(const std::string& binary) {
     int decimal = 0;
     int power = 0;
@@ -16,7 +16,6 @@ int binaryToDecimal(const std::string& binary) {
     return decimal;
 }
 
-// Function to convert decimal to binary string
 std::string decimalToBinary(int decimal) {
     std::string binary;
 
@@ -32,17 +31,17 @@ int main() {
     std::string input1, input2;
     char format;
 
-    // Input format
-    std::cout << "Enter the format of the first number (b for binary, d for decimal): ";
-    std::cin >> format;
+    
+    cout << "Enter the format of the first number (b for binary, d for decimal): ";
+    cin >> format;
 
-    // Input numbers
-    std::cout << "Enter the first number: ";
+    
+    std::cout << "Wpisz pierwsza liczbe:  ";
     std::cin >> input1;
-    std::cout << "Enter the second number: ";
+    std::cout << "Wpisz druga liczbe: ";
     std::cin >> input2;
 
-    // Convert input to decimal form
+    
     int decimal1, decimal2;
 
     if (format == 'b') {
@@ -52,16 +51,20 @@ int main() {
         decimal1 = std::stoi(input1);
         decimal2 = std::stoi(input2);
     } else {
-        std::cerr << "Invalid input format. Please use 'b' for binary or 'd' for decimal." << std::endl;
+        std::();cerr << "Wpisz b lub d " <<endl;
         return 1;
     }
 
-    // Perform addition
+    
     int sum = decimal1 + decimal2;
 
-    // Display the result
-    std::cout << "Sum in binary: " << decimalToBinary(sum) << std::endl;
-    std::cout << "Sum in decimal: " << sum << std::endl;
+    std::cout << "Suma w postaci binarnej: " << decimalToBinary(sum) << std::endl;
+    std::cout << "Sum suma w postaci dziesietnej:  " << sum << endl;
 
     return 0;
+}
+
+void std::()
+{
+std::
 }

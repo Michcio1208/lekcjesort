@@ -16,8 +16,8 @@ int binaryToDecimal(const std::string& binary) {
     return decimal;
 }
 
-std::string decimalToBinary(int decimal) {
-    std::string binary;
+string decimalToBinary(int decimal) {
+    string binary;
 
     while (decimal > 0) {
         binary = (char)('0' + decimal % 2) + binary;
@@ -28,7 +28,7 @@ std::string decimalToBinary(int decimal) {
 }
 
 int main() {
-    std::string input1, input2;
+    string input1, input2;
     char format;
 
     
@@ -36,10 +36,10 @@ int main() {
     cin >> format;
 
     
-    std::cout << "Wpisz pierwsza liczbe:  ";
-    std::cin >> input1;
-    std::cout << "Wpisz druga liczbe: ";
-    std::cin >> input2;
+    cout << "Wpisz pierwsza liczbe:  ";
+    cin >> input1;
+    cout << "Wpisz druga liczbe: ";
+   cin >> input2;
 
     
     int decimal1, decimal2;
@@ -48,18 +48,18 @@ int main() {
         decimal1 = binaryToDecimal(input1);
         decimal2 = binaryToDecimal(input2);
     } else if (format == 'd') {
-        decimal1 = std::stoi(input1);
-        decimal2 = std::stoi(input2);
+        decimal1 = stoi(input1);
+        decimal2 = stoi(input2);
     } else {
-       cerr << "Wpisz b lub d " <<endl;
+       cerr << "nastepnym razem wpisz b lub d " <<endl;
         return 1;
     }
 
     
     int sum = decimal1 + decimal2;
 
-    std::cout << "Suma w postaci binarnej: " << decimalToBinary(sum) << std::endl;
-    std::cout << "Sum suma w postaci dziesietnej:  " << sum << endl;
+    cout << "Suma w postaci binarnej: " << decimalToBinary(sum) << std::endl;
+    cout << "Sum suma w postaci dziesietnej:  " << sum << endl;
 
     return 0;
 }

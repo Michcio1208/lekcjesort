@@ -51,7 +51,7 @@ int main() {
         decimal1 = std::stoi(input1);
         decimal2 = std::stoi(input2);
     } else {
-        std::();cerr << "Wpisz b lub d " <<endl;
+       cerr << "Wpisz b lub d " <<endl;
         return 1;
     }
 

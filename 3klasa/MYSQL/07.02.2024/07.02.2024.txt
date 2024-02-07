@@ -1,0 +1,60 @@
+DROP TABLE x - USUWANIE TABEL
+
+
+
+CREATE TABLE klasy(
+IDK int PRIMARY KEY,
+    klasa varchar(20)
+);
+
+CREATE TABLE Nau(
+  IDN int PRIMARY KEY,
+    imie varchar(20)
+    nazwisko varchar(20)
+);
+
+CREATE TABLE B(
+ID_N int, 
+    ID_K int, 
+   FOREIGN KEY (ID_N) REFERENCES klasy(IDK),
+    FOREIGN KEY (ID_K) REFERENCES nau(IDN)
+)
+
+
+///////////////////////////////////////////////////////
+
+
+
+
+CREATE TABLE przed(
+IDp int PRIMARY KEY,
+    przedmiot varchar(20)
+);
+
+CREATE TABLE Nau(
+  IDN int PRIMARY KEY,
+    imie varchar(20),
+    nazwisko varchar(20),
+     id_p int,
+    FOREIGN KEY (id_p) REFERENCES przed(IDp)
+);
+
+CREATE TABLE cele(
+IDC int PRIMARY KEY, 
+    cel varchar(20), 
+    ID_przedmiotu int,
+   FOREIGN KEY (ID_przedmiotu) REFERENCES przed(IDp)
+    );
+    
+    CREATE TABLE pw(
+    idw int PRIMARY KEY,
+        id_celu int,
+        temat varchar(20),
+        miesiac varchar(20),
+        liczba_dni int,
+    FOREIGN KEY (id_celu) REFERENCES cele(IDC)
+    )
+
+
+
+

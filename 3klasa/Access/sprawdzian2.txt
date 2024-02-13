@@ -1,0 +1,47 @@
+1.
+SELECT prac.pracownik, wyn.rok, SUM(pensja_brutto)
+FROM Pracownicy AS prac INNER JOIN Wynagrodzenia AS wyn ON prac.ID=wyn.ID_pracownika
+WHERE wyn.rok=2018 and prac.pracownik="Pracownik_8"
+GROUP BY prac.pracownik, wyn.rok 
+
+2. 
+SELECT prac.pracownik, prac.dział, wyn.pensja_brutto
+FROM Pracownicy AS prac INNER JOIN Wynagrodzenia AS wyn ON prac.ID=wyn.ID_pracownika
+WHERE prac.pracownik="Pracownik_4"
+
+3. 
+SELECT  wyn.rok, SUM(pensja_brutto)
+FROM Pracownicy AS prac INNER JOIN Wynagrodzenia AS wyn ON prac.ID=wyn.ID_pracownika
+WHERE wyn.rok=2018 or wyn.rok=2019
+GROUP BY wyn.rok
+
+4.
+SELECT  prem.rok, AVG(prem.Premia)
+FROM Pracownicy AS prac INNER JOIN Premie AS prem ON prac.ID=prem.ID_pracownika
+WHERE wyn.rok=2019
+GROUP BY prem.rok
+
+
+
+5.
+
+SELECT uc.nazwisko, COUNT(Oc.Ocena)
+FROM Uczniowie AS uc INNER JOIN Oceny AS oc ON uc.ID = oc.uczeń
+GROUP BY uc.nazwisko
+HAVING COUNT(oc.ocena)>3
+
+6. 
+SELECT uc.imię, uc.nazwisko, uc.klasa, oc.ocena
+FROM Uczniowie AS uc INNER JOIN Oceny AS oc ON uc.Identyfikator = oc.uczeń
+WHERE uc.klasa="1a" and uc.adres="Mikołajki"
+
+7.
+SELECT przedmioty.nauczyciel, oceny.ocena
+FROM Przedmioty  INNER JOIN Oceny  ON przedmioty.Identyfikator = oceny.przedmiot
+WHERE oceny.ocena=1
+ 
+8.
+SELECT uczniowie.nazwisko,uczniowie.imię, oceny.ocena
+FROM Uczniowie  INNER JOIN Oceny  ON uczniowie.Identyfikator = oceny.uczeń
+WHERE oceny.ocena=5
+ 

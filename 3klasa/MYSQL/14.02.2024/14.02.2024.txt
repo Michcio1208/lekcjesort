@@ -1,0 +1,65 @@
+CREATE TABLE kategorie(
+kategorie_id int PRIMARY KEY,
+    nazwa_kategorii varchar(20)
+);
+
+CREATE TABLE aktorzy(
+aktor_id int PRIMARY KEY,
+    imie varchar(20),
+    nazwisko varchar(20)
+);
+
+CREATE TABLE filmy(
+film_id int PRIMARY KEY,
+    kategoria_id int ,
+    tytul varchar(20),
+    rezyser varchar(20),
+    rok_produkcji int ,
+    FOREIGN KEY (kategoria_id) REFERENCES kategorie(kategorie_id)
+    
+);
+
+CREATE TABLE filmaktor(
+film_id int,
+    aktor_id int,
+    FOREIGN KEY (film_id) REFERENCES filmy(film_id),
+    FOREIGN KEY (aktor_id) REFERENCES aktorzy(aktor_id)
+)
+
+INSERT INTO aktorzy VALUES (1, "Jan","Kowalski");
+INSERT INTO aktorzy VALUES (2, "krzysztof","Kowalski");
+INSERT INTO aktorzy VALUES (3, "michal","feigel");
+INSERT INTO aktorzy VALUES (4, "Karol","Onek");
+INSERT INTO aktorzy VALUES (5, "Tomasz","Karolak");
+INSERT INTO aktorzy VALUES (6, "ojciec","twojego_ojca");
+INSERT INTO aktorzy VALUES (7, "szymon","niedbala")
+
+
+INSERT INTO filmy VALUES (1,1, "kiler","krzysztof kowalski",2077);
+INSERT INTO filmy VALUES (2,2, "magnetyzm", "michal fajgello", 1410);
+INSERT INTO filmy VALUES (3,3, "boio","tomasz szul",2024);
+INSERT INTO filmy VALUES (4,1, "Karol Onek - historia","andrzej",2023);
+INSERT INTO filmy VALUES (5,2, "Tomasz","Karolak",1999);
+INSERT INTO filmy VALUES (6,3,"ojciec twojego ojca","olaf lubaszenko",2007);
+INSERT INTO filmy VALUES (7,1, "z zamoyskiego pala","szymon niedbala",2021)
+
+
+INSERT INTO kategorie VALUES (1,1, "biografia");
+INSERT INTO kategorie VALUES (2,2, "dramat");
+INSERT INTO kategorie VALUES (3,3, "komedia")
+
+
+INSERT INTO filmaktor VALUES (1,1);
+INSERT INTO filmaktor VALUES (2,2);
+INSERT INTO filmaktor VALUES (3,3);
+INSERT INTO filmaktor VALUES (4,4);
+INSERT INTO filmaktor VALUES (5,5);
+INSERT INTO filmaktor VALUES (6,6);
+INSERT INTO filmaktor VALUES (7,7)
+
+
+
+SELECT tytul FROM `filmy` WHERE film_id%2=0;
+
+SELECT filmy.tytul,kategorie.nazwa_kategorii FROM `filmy` INNER JOIN kategorie ON kategoria_id=kategoria_id
+WHERE kategorie.nazwa_kategorii="dramat"

@@ -1,0 +1,47 @@
+-------------FILMY I AKTORZY----------------------
+/polaczenie 3 tabel
+SELECT * 
+FROM tabela_1 INNER JOIN(tabela_2 INNER JOIN tabela_3 ON Tabela_2.id=tabela_3.id)
+ON tabela_1.id=tabela2.id
+
+
+
+SELECT * 
+FROM aktorzy INNER JOIN(filmy INNER JOIN filmaktor ON filmy.film_id=filmaktor.film_id)
+ON aktorzy.aktor_id=filmaktor.aktor_id
+WHERE aktorzy.nazwisko="kowalski"
+
+
+/aktorzy w filmie magnetyzm
+
+SELECT aktorzy.imie, aktorzy.nazwisko, filmy.tytul
+FROM aktorzy INNER JOIN(filmy INNER JOIN filmaktor ON filmy.film_id=filmaktor.film_id)
+ON aktorzy.aktor_id=filmaktor.aktor_id
+WHERE filmy.tytul="magnetyzm"
+
+
+----------------------------DANE 1--------------------------------------------
+
+SELECT towary.nazwa,towary.cena, pozycja.pozycja
+FROM towary INNER JOIN pozycja ON pozycja.id_towaru=towary.id_towaru
+
+
+/ile faktur na pracownika
+
+SELECT pracownicy.imie, pracownicy.Nazwisko, COUNT(faktury.id_faktury)
+FROM pracownicy INNER JOIN faktury ON pracownicy.ID_pracownika=faktury.id_pracownik
+GROUP BY pracownicy.imie, pracownicy.Nazwisko
+
+
+/ktory pracownik obsluguje kotrego klienta
+
+SELECT pracownicy.ID_pracownika,pracownicy.nazwisko, klienci.ID_Klienta,klienci.nazwisko
+FROM pracownicy INNER JOIN(klienci INNER JOIN faktury ON klienci.ID_Klienta=faktury.id_klient)
+ON pracownicy.ID_pracownika=faktury.id_pracownik
+
+
+
+
+
+
+

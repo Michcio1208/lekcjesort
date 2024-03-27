@@ -64,4 +64,4 @@ int main() {
     std::cout << "Sum in decimal: " << sum << std::endl;
 
     return 0;
-}
+} /*lol*/

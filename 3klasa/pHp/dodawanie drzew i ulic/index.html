@@ -3,8 +3,9 @@
     <meta charset="UTF-8">
 </head>
 <title> Zarzad zieleni</title>
-<body>
 
+<body>
+<!--
     <h1>
 Zarzad zielenia
 </h1>
@@ -33,6 +34,31 @@ ULICA:
 <input type="submit" value="Zapisz">
 
 </form>
+
+<h2> wyswietlanie</h2>
+<h3>wyswietlanie ulic i drzew</h3>  
+<form action="wyswietlenie.php" method="POST">
+
+Wybierz co wyswietlac:
+<select name="lista">
+    <option>drzewo</option>
+    <option>ulice </option>
+</select>
+<input type="submit" value="Wyswietl"/>
+-->
+<h2>liczba gatunkow drzew</h2>
+<form action="liczba.php" method="POST">
+    ulica:
+    <input type="text" name="ulica" maxlength="50"/>
+<input type="submit" value="wyslij"/> 
+
+</form>   
+
+
+
+
+
+
 
 </body>
 

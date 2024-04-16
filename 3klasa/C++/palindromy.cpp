@@ -2,6 +2,30 @@
 #include <string>
 using namespace std;
 
+bool palindrom(string wyraz){
+string a;
+    int i,j;
+    j=a.size() -1;
+    i=0;
+    bool p= true;
+    while (p && i<j)
+    {
+        if (a[i]==a[j])
+        {
+           i++;
+           j--;
+        }
+        else{
+            p=false;
+        }
+    }
+    if (p)
+    {
+        cout<<a<<endl;
+    }
+    
+}
+
 int main (){
     /*
     //sprawdzamy czy slowo jest palindormem
@@ -31,12 +55,17 @@ int main (){
         cout<<"NIe"<<endl;
     }
     */
-   
+
+
+   //wypisywanie palindormow
+
+getline(cin,zdanie);
+sprawdzenie(zdanie);
 
 
 
 
 
-
+return 0;
 
 }

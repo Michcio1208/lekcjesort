@@ -23,10 +23,10 @@ int main (){
     }
     if (palindrom)
     {
-        cout<<"TAK";
+        cout<<"TAK"<<endl;
     }
     else{
-        cout<<"NIe";
+        cout<<"NIe"<<endl;
     }
     
 

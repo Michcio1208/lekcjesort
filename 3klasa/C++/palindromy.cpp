@@ -3,6 +3,8 @@
 using namespace std;
 
 int main (){
+    /*
+    //sprawdzamy czy slowo jest palindormem
     string a;
     cout<<"podaj wyraz"<<endl;
     cin>>a;
@@ -28,7 +30,8 @@ int main (){
     else{
         cout<<"NIe"<<endl;
     }
-    
+    */
+   
 
 
 

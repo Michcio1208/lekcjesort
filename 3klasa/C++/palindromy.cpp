@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+/*
 bool palindrom(string wyraz){
 string a;
     int i,j;
@@ -24,10 +24,10 @@ string a;
         cout<<a<<endl;
     }
     
-}
+}*/
 
 int main (){
-    /*
+    
     //sprawdzamy czy slowo jest palindormem
     string a;
     cout<<"podaj wyraz"<<endl;
@@ -54,18 +54,18 @@ int main (){
     else{
         cout<<"NIe"<<endl;
     }
-    */
+    
 
 
    //wypisywanie palindormow
 
-getline(cin,zdanie);
-sprawdzenie(zdanie);
+//getline(cin,zdanie);
+//sprawdzenie(zdanie);
 
 
 
 
 
-return 0;
+//return 0;
 
 }

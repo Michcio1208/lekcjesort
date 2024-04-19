@@ -59,13 +59,13 @@ int main (){
         cout<<"NIe"<<endl;
     }
     
-*/
+
 
    //wypisywanie palindormow
-  
+  *//*
 string zdanie , wyraz ;
 int i;
-cout<<"podaj zdanie";
+cout<<"podaj zdanie"<<endl;
 getline(cin,zdanie);
 zdanie=zdanie+' ';
 
@@ -76,17 +76,20 @@ while (zdanie.size()>0)
   {
     wyraz=zdanie.substr(0,i);
     if(palindrom(wyraz)) {
-    cout<<wyraz<<endl;}
+    cout<<wyraz<<endl;
+    }
   }
   zdanie.erase(0,i+1);
 }
-
+*/
 string zdanie , wyraz ;
 int i;
 cout<<"podaj zdanie";
 getline(cin,zdanie);
 wyraz=tylkolitery(zdanie);
-if(palindrom(wyraz))
+if(palindrom(wyraz)) cout<<"zdanie to palindorm";
+else cout<<"zdanie nie jest palindromem";
+
 
 
 

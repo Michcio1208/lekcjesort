@@ -68,7 +68,8 @@ while (zdanie.size()>0)
   if(i>0)
   {
     wyraz=zdanie.substr(0,i);
-    if(palindrom(wyraz)) cout<<wyraz<<endl;
+    if(palindrom(wyraz)) {
+    cout<<wyraz<<endl;}
   }
   zdanie.erase(0,i+1);
 }

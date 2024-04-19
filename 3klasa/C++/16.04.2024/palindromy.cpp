@@ -3,23 +3,30 @@
 using namespace std;
 
 bool palindrom(string wyraz){
-string a;
-    int i,j;
-    j=a.size() -1;
-    i=0;
-    bool p= true;
-    while (p && i<j)
+ bool p=true;
+    int i=0, j=wyraz.size() -1;
+    while (palindrom && i<j)
     {
-        if (a[i]==a[j])
-        {
-           i++;
-           j--;
-        }
-        else{
-            p=false;
-        }
+       if(tolower(wyraz[i])==tolower(wyraz[j])){
+        i++;
+        j--;
+       }
+       else{
+        p=false;
+       }
     }
     return p;
+    
+}
+
+string tylkolitery(string s){
+    int i=0;
+    while (i<s.size())
+    {
+      if(toupper(s[i])>='A' && toupper(s[i]<='Z')) i++;
+      else s.erase(i,1);
+      return s;
+    }
     
 }
 
@@ -74,7 +81,12 @@ while (zdanie.size()>0)
   zdanie.erase(0,i+1);
 }
 
-
+string zdanie , wyraz ;
+int i;
+cout<<"podaj zdanie";
+getline(cin,zdanie);
+wyraz=tylkolitery(zdanie);
+if(palindrom(wyraz))
 
 
 

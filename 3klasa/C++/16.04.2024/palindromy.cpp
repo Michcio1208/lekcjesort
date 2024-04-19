@@ -56,7 +56,22 @@ int main (){
 
    //wypisywanie palindormow
   
+string zdanie , wyraz ;
+int i;
+cout<<"podaj zdanie";
+getline(cin,zdanie);
+zdanie=zdanie+' ';
 
+while (zdanie.size()>0)
+{
+  i=zdanie.find(' ');
+  if(i>0)
+  {
+    wyraz=zdanie.substr(0,i);
+    if(palindrom(wyraz)) cout<<wyraz<<endl;
+  }
+  zdanie.erase(0,i+1);
+}
 
 
 

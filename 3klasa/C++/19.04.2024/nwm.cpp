@@ -17,8 +17,11 @@ else return false;
 }
 
 int main(){
-
-
+string wyraz;
+cout<<"podaj wyraz"<<endl;
+cin>>wyraz;
+if(tylkomale(wyraz))cout<<"wyraz ma tylko male litery";
+else cout<<"w wyrazie znajduja sie duze litery";
 
 
 

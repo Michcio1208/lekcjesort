@@ -1,55 +1,49 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+
 using namespace std;
-bool palindrom(string wyraz){
- bool p=true;
-    int i=0, j=wyraz.size() -1;
-    while (palindrom && i<j)
-    {
-       if(tolower(wyraz[i])==tolower(wyraz[j])){
+
+bool isPalindrome(string word) {
+    int i = 0, j = word.size() - 1;
+    while (i < j) {
+        if (tolower(word[i]) != tolower(word[j])) {
+            return false;
+        }
         i++;
         j--;
-       }
-       else{
-        p=false;
-       }
     }
-    return p;
-    
+    return true;
 }
 
-string tylkolitery(string s){
-    int i=0;
-    while (i<s.size())
-    {
-      if(toupper(s[i])>='A' && toupper(s[i]<='Z')) i++;
-      else s.erase(i,1);
-      return s;
+string onlyLetters(string s) {
+    string result;
+    for (char c : s) {
+        if (isalpha(c)) {
+            result += c;
+        }
     }
-    
+    return result;
 }
 
-int main (){
+int main() {
+    string sentence, word;
+    cout << "Enter a sentence: ";
+    getline(cin, sentence);
 
-string zdanie , wyraz ;
-int i;
-cout<<"podaj zdanie"<<endl;
-getline(cin,zdanie);
-zdanie=zdanie+' ';
+    sentence += ' '; // Add space to the end to ensure the last word is processed
 
-while (zdanie.size()>0)
-{
-  i=zdanie.find(' ');
-  if(i>0)
-  {
-    wyraz=zdanie.substr(0,i);
-    if(palindrom(wyraz)) {
-    cout<<wyraz<<endl;
+    while (sentence.size() > 0) {
+        size_t i = sentence.find(' ');
+        if (i != string::npos) {
+            word = sentence.substr(0, i);
+            word = onlyLetters(word);
+            if (!word.empty() && isPalindrome(word)) {
+                cout << word << endl;
+            }
+            sentence.erase(0, i + 1); // Move to the next word
+        }
     }
-  }
-  zdanie.erase(0,i+1);
-}
 
-
+    return 0;
 }

@@ -19,15 +19,12 @@ string a;
             p=false;
         }
     }
-    if (p)
-    {
-        cout<<a<<endl;
-    }
+    return p;
     
 }
-/*
+
 int main (){
-    
+    /*
     //sprawdzamy czy slowo jest palindormem
     string a;
     cout<<"podaj wyraz"<<endl;
@@ -58,7 +55,7 @@ int main (){
 */
 
    //wypisywanie palindormow
-
+  
 
 
 

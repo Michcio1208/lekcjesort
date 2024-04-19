@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
 bool palindrom(string wyraz){
@@ -62,7 +63,7 @@ int main (){
 
 
    //wypisywanie palindormow
-  *//*
+  */
 string zdanie , wyraz ;
 int i;
 cout<<"podaj zdanie"<<endl;
@@ -81,7 +82,7 @@ while (zdanie.size()>0)
   }
   zdanie.erase(0,i+1);
 }
-*/
+/*
 string zdanie , wyraz ;
 int i;
 cout<<"podaj zdanie";
@@ -89,7 +90,7 @@ getline(cin,zdanie);
 wyraz=tylkolitery(zdanie);
 if(palindrom(wyraz)) cout<<"zdanie to palindorm";
 else cout<<"zdanie nie jest palindromem";
-
+*/
 
 
 

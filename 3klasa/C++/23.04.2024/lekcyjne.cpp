@@ -3,7 +3,7 @@
 #include <sstream>
 
 using namespace std;
-
+/*
 void dp()
 {
 for(int i=1;i<=9;i++)
@@ -24,6 +24,7 @@ void other(){
         }
     }
 }
+*/
 int main(){
    
 }

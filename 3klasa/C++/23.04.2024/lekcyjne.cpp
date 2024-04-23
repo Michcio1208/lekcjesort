@@ -25,6 +25,22 @@ void other(){
     }
 }
 */
+
+void Upstring(string s){
+
+    int j=s.size()-1;
+    int i=0;
+    while(i<=j)
+    {
+        s[i]=toupper(s[i]);
+        i++;
+    }
+    cout<<s;
+}
 int main(){
-   
+    string s;
+   cout<<"podaj";
+   cin>>s;
+   cout<<endl;
+  Upstring(s);
 }

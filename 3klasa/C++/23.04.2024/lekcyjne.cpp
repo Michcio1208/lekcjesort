@@ -37,6 +37,19 @@ void Upstring(string s){
     }
     cout<<s;
 }
+bool czyliczbapalindrom(int liczba)
+{
+int stara=liczba;
+int odwrocona=0;
+while(liczba>0)
+{
+    odwrocona=odwrocona*10=liczba%10;
+    liczba=liczba/10;
+}
+
+
+}
+
 int main(){
     string s;
    cout<<"podaj";

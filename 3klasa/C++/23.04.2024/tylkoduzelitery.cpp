@@ -10,7 +10,7 @@ int main() {
     getline(cin, userInput);
 
     cout << "Text in big letters:\n";
-    for (char c : userInput) {
+    for (char c : userInput) { // zajebiste, przyjmuje kazdy char(litere) w stringu
         if (isupper(c)) {
             cout << c;
         }

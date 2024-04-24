@@ -43,7 +43,7 @@ int main() {
     // Sorting the table using bubble sort
    /* bubbleSortm(table, n);
 
-    cout << "Sorted table in ascending order: ";
+    cout << "Sorted table in descending order: ";
     for (int i = 0; i < n; i++) {
         cout << table[i] << " ";
     }

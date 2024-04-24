@@ -1,0 +1,7 @@
+A[0]<A[1]<...<A[n-1]
+np 
+6,4,9,1,5
+6>4 ? tak , więc zamieniamy
+6 > 9 nie , to zostaje
+9>1 tak , wiec zamieniamy i tak dalej 
+najwiekszy element zawsze zostaje na koncu 

@@ -9,7 +9,7 @@ $polaczenie=new mysqli("localhost","root","","MotoGP");
 $polaczenie->query("INSERT INTO Zawodnicy(numer,imie,nazwisko,punkty,kraj,druzyna) VALUES ('$numer','$imie','$nazwisko','$punkty','$kraj','$druzyna')");
 $polaczenie->close();
 
-echo "Dodano zawodnika $imie $nazwisko z numerem $numer z kraju $kraj majacego $punkty punktow, jezdzacego dla drużyny $druzyna <br/>"
+echo "Dodano zawodnika $imie $nazwisko z numerem $numer z kraju $kraj majacego $punkty punktów, jeżdzacego dla drużyny $druzyna <br/>"
 ?>
 <a href="index.html" >wroc </a>
 <body bgcolor="#ADEAEA"></body>

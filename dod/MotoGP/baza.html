@@ -1,2 +1,44 @@
 <html lang="pl">
     <meta charset="utf-8">
+    <body bgcolor="#ADEAEA">
+        <a href="index.html"><p align="center"> STRONA GŁÓWNA</p></a>
+        <h1 align="center"> Tworzenie własnej tabeli i jej wyświetlanie</h1>
+        <h2 align="center"> Dodawanie drużyn</h2>
+<form action="dodaj_druzyne.php" method="post">
+    Nazwa drużyny: 
+    <input type="text" name="druzyna" maxlength="50">
+    <input type="submit" value="Dodaj druzyne">
+</form>
+
+<h2 align="center"> Dodawanie zawodników</h2>
+<form action="dodaj_zawodnika.php" method="post">
+    Numer zawodnika:
+    <input type="number" name="numer" maxlength="2"><br>
+    Imie:
+<input type="text" name="imie" maxlength="20"><br>
+Nazwisko: 
+<input type="text" name="nazwisko" maxlength="20"><br>
+Punkty zdobyte przez zawodnika: 
+<input type="number" name="punkty"><br>
+Kraj pochodzenia zawodnika:
+<input type="text" name="kraj" maxlength="20"><br>
+ID druzyny:
+<input type="number" name="id_druzyna"><br>
+<input type="submit" value="Dodaj zawodnika">
+</form>
+<h2 align="center"> Wyswietlanie</h2>
+<form action="wyswietlenie.php" method="post">
+Wybierz co wyswietlac: 
+<select name="lista">
+    <option>zawodnicy</option>
+    <option>drużyny </option>
+</select>
+<input type="submit" value="Wyswietl"/>
+
+
+
+</form>
+
+
+        </body>
+        </html>

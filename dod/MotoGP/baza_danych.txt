@@ -1,0 +1,15 @@
+najpierw trzeba stworzyc baze danych o nazwie "MotoGP" , a w niej tabele: 
+
+CREATE TABLE Druzyny(
+id_druzyny INT PRIMARY KEY AUTO_INCREMENT,
+    nazwa_druzyny varchar(50)
+);
+CREATE TABLE Zawodnicy(
+numer  INT PRIMARY KEY ,
+    imie varchar(20),
+ nazwisko varchar(20),
+    punkty int,
+    kraj varchar(20),
+    druzyna int,
+    FOREIGN KEY zawodnicy(druzyna) REFERENCES Druzyny(id_druzyny)
+)

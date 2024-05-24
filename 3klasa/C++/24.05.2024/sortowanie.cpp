@@ -24,7 +24,7 @@ int maks=A[0];
 int mini=A[0];
 for(int i=1;i<10;i++){
 if(A[i]>maks) maks=A[i];
-if(A[i]>mini) mini=A[i];
+if(A[i]<mini) mini=A[i];
 }
 cout<<mini<<" "<<maks<<endl;
         

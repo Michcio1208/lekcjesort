@@ -27,3 +27,10 @@ if(A[i]>maks) maks=A[i];
 if(A[i]>mini) mini=A[i];
 }
 cout<<mini<<" "<<maks<<endl;
+        
+        
+        
+        
+        
+        
+        }

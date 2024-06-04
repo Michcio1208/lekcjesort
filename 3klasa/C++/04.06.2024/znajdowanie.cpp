@@ -24,15 +24,18 @@ return (A[lewy==x]);
 
 const int N=10;
 int main(){
+    
 int num;
-cout<<"podaj liczbe"<<endl;
+//cout<<"podaj liczbe"<<endl;
 cin>>num;
 int A[N]={1,2,3,4,5,6,7,8,9,10};
-for(int i=0; i<N;i++){
+/*for(int i=0; i<N;i++){
 if(A[i]==num){
     cout<<"tak na pozycji"<<i<<endl;
 }
-}
+}*/
+
+if(SzukajBin(A,num)) cout<<"wystepuje w tablicy"<<endl;
 
 
 

@@ -59,6 +59,7 @@
   "files.associations": {
     "string": "cpp",
     "cctype": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "iostream": "cpp"
   }
 }

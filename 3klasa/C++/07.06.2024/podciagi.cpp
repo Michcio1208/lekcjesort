@@ -64,9 +64,15 @@ return max0;
 
 int main(){
     int A[N]={0,1,2,3,4,5,6,7,8,9};
-    cout<<DNSPNM(A)<<endl;
-   cout<<NSPNM(A)<<endl;
+  /* cout<<DNSPNM(A)<<endl;
+   cout<<NSPNM(A)<<endl;*/
+ int i=NSPNM(A);
+ do{
+cout<<i<<endl;
+i++;
+ }while (i<N && A[i]>=A[i-1]);
 
+ 
 
 
 

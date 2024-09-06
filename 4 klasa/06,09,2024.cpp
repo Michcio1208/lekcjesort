@@ -1,14 +1,14 @@
-#include <iostream
+#include <iostream>
 #include <cstring>
 using namespace std;
 
 
 int main()
 {
-    string jawny, szyfrogram;
+    string jawny, szyfrogram="";
     int klucz, dl;
     
-    cout << "Podaj tekst jawny: ";
+    cout<<"Podaj tekst jawny: ";
     cin >> jawny;
     cout << "Podaj klucz: ";
     cin >> klucz;

@@ -4,7 +4,7 @@ using namespace std;
 
 
 int main(){
-
+/*
 char znak; 
 for (int i=48;i<=126;i++)
 {
@@ -17,6 +17,9 @@ for (int i=48;i<=126;i++)
 }
 cout<<endl; 
 
+*/
+
+//szyfr cezara
 
 
 

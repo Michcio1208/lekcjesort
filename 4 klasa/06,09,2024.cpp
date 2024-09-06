@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    //szyfr kolumnowy
     string jawny, szyfrogram="";
     int klucz, dl;
     

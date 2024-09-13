@@ -15,7 +15,7 @@ if(i>=0 && i<35)
     i=(i+klucz)%35;
     return alfabet_m[i];
 }
-int i=alfabet_w.find(znak);
+ i=alfabet_w.find(znak);
 if(i>=0 && i<35)
 {
     i=(i+klucz)%35;

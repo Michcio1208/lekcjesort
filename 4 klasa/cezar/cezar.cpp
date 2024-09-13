@@ -8,6 +8,7 @@ string Cezar(string s, int klucz){
 string szyfrogram="";
 int kod;
 for(int i=0;i<s.size();i++)
+{
 if(toupper(s[i])>='A' && toupper(s[i])<='Z')
 {
 kod=s[i]+klucz;
@@ -15,6 +16,7 @@ if( (s[i]<='Z' && kod>'Z') || (s[i]>='a' && kod>'z')) kod=kod-26;
 szyfrogram=szyfrogram+char(kod);
 }
 else szyfrogram=szyfrogram+s[i];
+}
 return szyfrogram;
 }
 

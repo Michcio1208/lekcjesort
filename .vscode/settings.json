@@ -62,6 +62,7 @@
     "cctype": "cpp",
     "ostream": "cpp",
     "iostream": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "xstring": "cpp"
   }
 }

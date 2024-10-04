@@ -20,7 +20,7 @@ for(j=0;j<kl.size();j++)
 int main(){
 
 string klucz, tekst;
-cin>>tekst;
+getline(cin,tekst);
 cin>>klucz;
 przestaw2(tekst,klucz);
 

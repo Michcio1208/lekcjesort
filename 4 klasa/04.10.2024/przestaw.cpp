@@ -19,6 +19,17 @@ for(j=0;j<kl.size();j++)
 */
 
 
+void sortuj(string s)
+{
+int i,j,m;
+char ch;
+for(i=0;i<s.size()-1;i++)
+    m=i;
+    for(j=i+1;j<s.size();j++)
+        if(s[j]<s[m]) m=j;
+    ch=s[i];s[i]=s[m];s[m]=ch;
+
+}
 
 bool anagram(string s1,string s2)
 {
@@ -34,19 +45,8 @@ else
 
 
 
-void sortuj(string s)
-{
-int i,j,m;
-char ch;
-for(i=0;i<s.size()-1;i++)
-    m=i;
-    for(j=i+1;j<s.size();j++)
-        if(s[j]<s[m]) m=j;
-    ch=s[i];s[i]=s[m];s[m]=ch;
 
 
-
-}
 
 
 int main(){
@@ -62,7 +62,7 @@ string s1, s2;
 getline(cin,s1);
 getline(cin,s2);
 anagram(s1,s2);
-
+if(anagram) cout<<"tak";
 
 
 

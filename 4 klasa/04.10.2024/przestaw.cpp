@@ -38,8 +38,8 @@ if(s1.size()!=s2.size())
 else
     sortuj(s1);
     sortuj(s2);
-    if(s1==s2)
-        return true;
+    return(s1==s2);
+       
 }
 
 
@@ -62,7 +62,8 @@ string s1, s2;
 getline(cin,s1);
 getline(cin,s2);
 anagram(s1,s2);
-if(anagram) cout<<"tak";
+if(s1==s2) cout<<"tak";
+else cout<<"nie";
 
 
 

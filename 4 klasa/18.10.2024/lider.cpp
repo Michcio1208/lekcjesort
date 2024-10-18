@@ -58,6 +58,8 @@ for(int i=0;i<N;i++)
 int main()
 {
     int A[N];
-    cout<<szukaj2(A)<<endl;
+srand(time(NULL));
+losuj(A);
+wypisz(A);
 
 }

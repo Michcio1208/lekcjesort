@@ -23,6 +23,6 @@ return -1;
 
 int main()
 {
-    int A[1,2,4,2,2,2,2,2];
+    int A[N]={1,2,4,2,2,2,2,2};
     cout<<szukajlidera(A);
 }

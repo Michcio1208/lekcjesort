@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <algorithm>
 using namespace std;
 
 const int N=10;
@@ -24,5 +25,10 @@ return -1;
 int main()
 {
     int A[N]={1,2,4,2,2,2,2,2};
+    sort(A,A+N);
     cout<<szukajlidera(A)<<endl;
+ for (int i=0;i<N;i++)
+ {
+    cout<<A[i]<<endl;
+ }
 }

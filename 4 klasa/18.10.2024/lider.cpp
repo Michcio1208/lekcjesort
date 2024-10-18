@@ -13,7 +13,7 @@ for(int i=0;i<N;i++)
     {
         if(A[j]==A[i]) ile+=1;
     }
- if(ile>N/2) return A[i];
+    if(ile>N/2) return A[i];
 }
 return -1; 
 
@@ -24,5 +24,5 @@ return -1;
 int main()
 {
     int A[N]={1,2,4,2,2,2,2,2};
-    cout<<szukajlidera(A);
+    cout<<szukajlidera(A)<<endl;
 }

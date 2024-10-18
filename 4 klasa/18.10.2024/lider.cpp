@@ -2,6 +2,8 @@
 #include <string>
 #include <cctype>
 #include <algorithm>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 const int N=10;
@@ -34,11 +36,28 @@ else return -1;
 
 }
 
+int losuj(int A[])
+{
+for(int i=0;i<N;i++)
+{
+    A[i]=rand()%100;
+}
+
+}
+
+int wypisz(int A[])
+{
+for(int i=0;i<N;i++)
+{
+   cout<<A[i]<<" ";
+}
+}
+
 // liderem nazywamy taki element n-elementowego zbioru, ktory wystepuje wiecej niz n/2 razy
 
 int main()
 {
-    int A[N]={1,2,4,2,2,2,2,2};
+    int A[N];
     cout<<szukaj2(A)<<endl;
 
 }

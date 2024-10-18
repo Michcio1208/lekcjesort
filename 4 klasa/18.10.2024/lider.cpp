@@ -20,15 +20,25 @@ return -1;
 
 }
 
+int szukaj2(int A[])
+{ 
+int i,kandydat,ile =0;
+sort(A,A+N);
+kandydat=A[N/2];
+for(i=0;i<N;i++)
+    if(A[i]==kandydat) ile++;
+if(ile>N/2) return kandydat;
+else return -1; 
+
+
+
+}
+
 // liderem nazywamy taki element n-elementowego zbioru, ktory wystepuje wiecej niz n/2 razy
 
 int main()
 {
     int A[N]={1,2,4,2,2,2,2,2};
-    sort(A,A+N);
-    cout<<szukajlidera(A)<<endl<<endl;
- for (int i=0;i<N;i++)
- {
-    cout<<A[i]<<endl;
- }
+    cout<<szukaj2(A)<<endl;
+
 }

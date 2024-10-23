@@ -40,7 +40,17 @@ int losuj(int A[])
 {
 for(int i=0;i<N;i++)
 {
+
     A[i]=rand()%100;
+}
+}
+
+int losuj2(int A[])
+{
+for(int i=0;i<N;i++)
+{
+int x=rand()%100;
+
 }
 
 }

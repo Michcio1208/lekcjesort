@@ -62,4 +62,7 @@ srand(time(NULL));
 losuj(A);
 wypisz(A);
 
+
+// [a;b]
+// rand()%(b-a+1)+a
 }

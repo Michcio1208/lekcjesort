@@ -32,6 +32,27 @@ for(int i=0;i<N;i++)
     cout<<endl;
 }
 
+int szukajidola(bool A[][N])
+{
+int i, kandydat=0;
+bool jest_kandydat=false;
+while(kandydat<N && !jest_kandydat)
+{
+    i=0;
+    A[kandydat][kandydat]=false; 
+    while(i<N && !A[kandydat][i]) i++;
+    if(i==N) jest_kandydat=true;
+    else kandydat++;
+}
+if(!jest_kandydat) return -1;
+i=0; A[kandydat][kandydat] = true;
+while (i<N && A[i][kandydat])i++;
+if(i==N) return kandydat;
+else return -1;
+
+
+}
+
 int main()
 {
 //idol - wszyscy go znają, on nie zna nikogo
@@ -41,5 +62,5 @@ bool A[N][N];
 srand(time(NULL));
 Losuj(A);
 wypisz(A);
-
+szukajidola(A);
 }

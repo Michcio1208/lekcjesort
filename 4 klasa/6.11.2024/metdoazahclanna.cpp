@@ -28,6 +28,7 @@ int main(){
 int kwota,Reszta[N];
 cout<<"Podaj kwote w groszach"<<endl;
 cin>>kwota;
+wydajreszte(kwota,Reszta);
 for(int i=0;i<N;i++)
     if(Reszta[i]>0)
     cout<<nominaly[i]<<": "<<Reszta[i]<<endl;

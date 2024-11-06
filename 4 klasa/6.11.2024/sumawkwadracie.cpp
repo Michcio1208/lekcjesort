@@ -49,7 +49,8 @@ int A[N][N];
 srand(time(NULL));
 Losuj(A);
 Wypisz(A);
-
+cout<<endl;
+cout<<"Maksymalna suma: "<<makssuma(A)<<endl;
 
 
 

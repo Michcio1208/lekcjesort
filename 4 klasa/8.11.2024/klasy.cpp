@@ -4,9 +4,10 @@
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 using namespace std;
 
-const int N=1;
+const int N=10;
 
  struct proba{
     int pocz;
@@ -43,8 +44,13 @@ return lp;
 
 int main(){
 proba P[N];
+ifstream wej("proby.txt");
+for(int i=0;i<N;i++)
+    wej>>P[i].pocz>>P[i].czas;
+wej.close();
 
-
+sort(P,P+N,Porownaj);
+cout<<"maksymalna liczba prob: "<<MLP(P);
 
 
 

@@ -39,7 +39,7 @@ return ;
 
 
 int main(){
-proba P[N];
+przedmiot P[N];
 ifstream wej("proby.txt");
 for(int i=0;i<N;i++)
     wej>>P[i].pocz>>P[i].czas;

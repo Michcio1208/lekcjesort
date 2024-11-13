@@ -28,7 +28,11 @@ cout<<"podaj slowo"<<endl;
 cin>>s1;
 cin>>s2;
 anagram(s1, s2);
-if(anagram(s1, s2)==true) cout<<"tak";
+if(anagram(s1, s2)) 
+    cout<<"tak";
+
+
+
 
 
 }

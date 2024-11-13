@@ -6,7 +6,7 @@ using namespace std;
 void zlicz(string s, int ile[]) {
     for(int i = 0; i < 26; i++) ile[i] = 0;
     for(int i = 0; i < s.size(); i++) {
-        ile[toupper(s[i]) - 'A']++;  // Używamy toupper, aby obsłużyć zarówno małe jak i duże litery
+        ile[toupper(s[i]) - 'A']++;  
     }
 }
 

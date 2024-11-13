@@ -59,5 +59,7 @@ bool A[N][N];
 srand(time(NULL));
 Losuj(A);
 wypisz(A);
+cout<<endl;
 szukajidola(A);
+
 }

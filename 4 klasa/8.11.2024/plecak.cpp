@@ -19,7 +19,6 @@ bool Porownaj(przedmiot a, przedmiot b){
 
 int plecak(przedmiot P[], int makswaga, int K[]){
 int makswart=0;
-
 for(int i=1;i<N;i++){
    K[i]= makswaga / P[i].waga;
    makswaga=makswaga % P[i].waga;
@@ -27,7 +26,7 @@ for(int i=1;i<N;i++){
 
 
 }
-return ;
+return makswart;
 
 
 
@@ -40,13 +39,14 @@ return ;
 
 int main(){
 przedmiot P[N];
-ifstream wej("proby.txt");
+int K[N];
+ifstream wej("doplecaka.txt");
 for(int i=0;i<N;i++)
-    wej>>P[i].pocz>>P[i].czas;
+    wej>>P[i].wart>>P[i].waga;
 wej.close();
 
 sort(P,P+N,Porownaj);
-cout<<"maksymalna liczba prob: "<<MLP(P);
+cout<<"maksymalna wartość: "<<plecak(P,17,K);
 
 
 

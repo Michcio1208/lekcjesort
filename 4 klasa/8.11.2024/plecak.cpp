@@ -7,14 +7,14 @@
 #include <fstream>
 using namespace std;
 
-const int N=10;
+const int N=5;
 
  struct przedmiot{
     int wart,waga;
  };
 
 bool Porownaj(przedmiot a, przedmiot b){
-    return (float(a.wart)/+a.waga>float(b.wart)/b.waga);
+    return (float(a.wart)/a.waga>float(b.wart)/b.waga);
 }
 
 int plecak(przedmiot P[], int makswaga, int K[]){
@@ -22,7 +22,7 @@ int makswart=0;
 for(int i=1;i<N;i++){
    K[i]= makswaga / P[i].waga;
    makswaga=makswaga % P[i].waga;
-   makswart=makswart+K[i]*P[i].wart;
+   makswart+=K[i]*P[i].wart;
 
 
 }

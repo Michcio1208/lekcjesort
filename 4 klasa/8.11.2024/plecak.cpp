@@ -48,6 +48,10 @@ wej.close();
 sort(P,P+N,Porownaj);
 cout<<"maksymalna wartość: "<<plecak(P,17,K);
 
+for(int i=0;i<N;i++)
+{
+    cout<<K[i]<<P[i].wart<<" "<<P[i].waga<<endl;
+}
 
 
 

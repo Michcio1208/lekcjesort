@@ -40,7 +40,7 @@ return makswart;
 int main(){
 przedmiot P[N];
 int K[N];
-ifstream wej("doplecaka.txt");
+ifstream wej("do-plecaka.txt");
 for(int i=0;i<N;i++)
     wej>>P[i].wart>>P[i].waga;
 wej.close();

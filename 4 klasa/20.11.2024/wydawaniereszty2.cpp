@@ -17,7 +17,6 @@ int i,j,k;
 int IleM[kwota+1];
 int ResztaM[kwota+1][j];
 IleM[0]=0;
-int ResztaM[0][i];
 for(int i=1;i<=kwota;i++) IleM[i]=kwota+1;
 for(int i=0;i<N;i++) 
 for(int i=1;i<=kwota;i++)  

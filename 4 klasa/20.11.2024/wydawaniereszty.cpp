@@ -26,7 +26,7 @@ return IleM[kwota];
 }
 
 int main(){
-
+cout<<ileMonet;
 
 
 

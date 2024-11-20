@@ -15,7 +15,7 @@ const int kwota=8;
 int resztadynamicznie2tablice(int Reszta[]){
 int i,j,k;
 int IleM[kwota+1];
-int ResztaM[kwota+1][j];
+int ResztaM[kwota+1][N];
 IleM[0]=0;
 for(int i=1;i<=kwota;i++) IleM[i]=kwota+1;
 for(int i=0;i<N;i++) 
@@ -38,7 +38,7 @@ return IleM[kwota];
 
 int main (){
 int Reszta[N];
-cout<<"minimlna liczba monet to dla kwoty "<<kwota<<" "<<resztadynamicznie2tablice(Reszta)<<endl;
+cout<<"minimlna liczba monet to dla kwoty "<<kwota<<": "<<resztadynamicznie2tablice(Reszta)<<endl;
 
 
 

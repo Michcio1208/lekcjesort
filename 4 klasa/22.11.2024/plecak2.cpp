@@ -35,7 +35,7 @@ ifstream wej("do-plecaka.txt");
 for(int i=0;i<N;i++)
     wej>>P[i].wart>>P[i].waga;
 wej.close();
-cout<<"Maksymalna wartosc plecaka to: "<<plecakdynamicznie(P);
+cout<<"Maksymalna wartosc plecaka to: "<<plecakdynamicznie(P)<<endl;
 
 
     

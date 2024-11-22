@@ -27,7 +27,7 @@ int plecakdynamicznie(Przedmiot P[]) {
     return W[makswaga];
 }
 
-int main() {
+int main(){
     Przedmiot P[N];
     ifstream wej("do-plecaka.txt");
     if (!wej) { // Sprawdź, czy plik został poprawnie otwarty
@@ -46,3 +46,4 @@ int main() {
 
     cout << "Maksymalna wartosc plecaka to: " << plecakdynamicznie(P) << endl;
 
+}

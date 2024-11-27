@@ -97,11 +97,19 @@ jako binarny
 9 1001
 A 1010
 B 1011
+C 1100
+D 1101
+E 1110
+F 1111
 
 jak mamy liczbe 1011101111 i chcemy zamienić na osemkowy to dzielimy na trojki od prawej i uzupelniamy luki zerami
 001 011 101 111
 1    3  5    7  = 1357 w osemkowym
 
 
+
+110011011 na szesnastkowy
+0001 1001 1011
+1     9    B   = 19B
 */
 }

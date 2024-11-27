@@ -111,5 +111,22 @@ jak mamy liczbe 1011101111 i chcemy zamienić na osemkowy to dzielimy na trojki 
 110011011 na szesnastkowy
 0001 1001 1011
 1     9    B   = 19B
+
+
+
+
+
+
+w przypadku dodawwanie gdy w wyniku otrzymuje wartosc wieksza od 2,
+w rozwiazaniu wpisujemy reszte z dzielenia  tej wartości przez 2 w lewo 
+zaś przenosimy wynik dzielenia calkowietego tej liczby przez 2 
+
+
+0+0=0
+0+1=1
+1+0=1
+1+1=10
+1+1+1=11
+1+1+1+1=100
 */
 }

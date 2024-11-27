@@ -70,5 +70,38 @@ czyli 1101010100
 852,6875 = 1101010100,1011
 
 
+
+osemkowy
+jako binarny
+0
+1
+2
+3
+4
+5
+6 
+7 |
+
+
+szesnastkowy
+jako binarny
+0 0000
+1 0001
+2 0010
+3 0011
+4 0100
+5 0101
+6 0110
+7 0111
+8 1000
+9 1001
+A 1010
+B 1011
+
+jak mamy liczbe 1011101111 i chcemy zamienić na osemkowy to dzielimy na trojki od prawej i uzupelniamy luki zerami
+001 011 101 111
+1    3  5    7  = 1357 w osemkowym
+
+
 */
 }

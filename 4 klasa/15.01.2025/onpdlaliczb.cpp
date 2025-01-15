@@ -85,5 +85,6 @@ int main() {
     cout << "Podaj wyrazenie algebraiczne: " << endl;
     cin >> w;
     cout << "Odwrotna notacja polska: " << ONP(w) << endl;
+    cout<<"Wynik: "<<Oblicz(ONP(w))<<endl;
     return 0;
 }

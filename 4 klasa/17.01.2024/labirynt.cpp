@@ -38,9 +38,23 @@ void wypiszlabirynt(int lab[][N]){
         }
     }
 
+
+
+       
+    bool droga(int lab [][N],int w,int k){
+        lab[w][k]=1;
+        if(w==0 || w==N-1 || k==0 || k==N-1) return true;
+        if(lab[w-1][k]==0 && droga(lab,w-1,k)) return true;
+        if(lab[w+1][k]==0 && droga(lab,w+1,k)) return true;
+        if(lab[w][k-1]==0 && droga(lab,w,k-1)) return true;
+        if(lab[w][k+1]==0 && droga(lab,w,k+1)) return true;
+
+        return false;
+    }
 int main(){
  int lab[N][N];
     wczytajlabirynt(lab);
     wypiszlabirynt(lab);
+    droga(lab,0,0);
 
 }

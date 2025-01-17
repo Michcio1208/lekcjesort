@@ -39,6 +39,8 @@ void wypiszlabirynt(int lab[][N]){
     }
 
 int main(){
-
+ int lab[N][N];
+    wczytajlabirynt(lab);
+    wypiszlabirynt(lab);
 
 }

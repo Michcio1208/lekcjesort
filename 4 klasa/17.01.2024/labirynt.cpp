@@ -14,7 +14,7 @@ void wczytajlabirynt(int lab[][N]){
     for(int i=0;i<N;i++){
         we>>s;
         for(int j=0;j<N;j++){
-            if(s[j]=='#') lab[i][j]=-1;
+            if(s[j]=='X') lab[i][j]=-1;
             else lab[i][j]=0;
         }
     }

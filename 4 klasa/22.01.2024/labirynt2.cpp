@@ -69,3 +69,14 @@ void oznaczdroge(int lab[][N],int w,int k){
     }
     
 }
+
+int main(){
+  int a;
+  int b;
+  cin>>a;
+  cin>>b;
+     int lab[N][N];
+    wczytajlabirynt(lab);
+    wypiszlabirynt(lab);
+    droga(lab,0,0,1,a,b);
+}

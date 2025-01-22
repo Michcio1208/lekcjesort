@@ -79,4 +79,4 @@ int main(){
     wczytajlabirynt(lab);
     wypiszlabirynt(lab);
     droga(lab,0,0,1,a,b);
-}//chuj
+}

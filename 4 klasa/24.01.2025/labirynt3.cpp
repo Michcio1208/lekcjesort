@@ -114,8 +114,8 @@ int main(){
   cin>>p1.w;
   cin>>p1.k;
      
-  if ( droga(lab,a,b)){
-      oznaczdroge(lab,a,b);
+  if ( droga(lab,p1,p2)){
+      oznaczdroge(lab,p2.w,p2.k);
       wypiszlabirynt(lab);
   }
   else cout<<"nie ma drogi"<<endl;

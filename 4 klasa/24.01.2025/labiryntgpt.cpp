@@ -66,19 +66,19 @@ bool droga(int lab[][N], pole p1, pole &p2) {
         } else {
             if (w > 0 && lab[w - 1][k] == 0) {
                 lab[w - 1][k] = lab[w][k] + 1;
-                q.push({w - 1, k});
+                q.push(pole{w - 1, k});
             }
             if (w < N - 1 && lab[w + 1][k] == 0) {
                 lab[w + 1][k] = lab[w][k] + 1;
-                q.push({w + 1, k});
+                q.push(pole{w + 1, k});
             }
             if (k > 0 && lab[w][k - 1] == 0) {
                 lab[w][k - 1] = lab[w][k] + 1;
-                q.push({w, k - 1});
+                q.push(pole{w, k - 1});
             }
             if (k < N - 1 && lab[w][k + 1] == 0) {
                 lab[w][k + 1] = lab[w][k] + 1;
-                q.push({w, k + 1});
+                q.push(pole{w, k + 1});
             }
         }
     }

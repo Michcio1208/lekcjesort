@@ -106,12 +106,18 @@ void oznaczdroge(int lab[][N],int w,int k){
 }
 
 int main(){
-  int a;
-  int b;
-  cin>>a;
-  cin>>b;
-     int lab[N][N];
+    int lab[N][N];
     wczytajlabirynt(lab);
     wypiszlabirynt(lab);
-    droga(lab,a,b);
+  pole p1,p2;
+  cout<<"podaj p1 i p2/ w i k"<<endl;
+  cin>>p1.w;
+  cin>>p1.k;
+     
+  if ( droga(lab,a,b)){
+      oznaczdroge(lab,a,b);
+      wypiszlabirynt(lab);
+  }
+  else cout<<"nie ma drogi"<<endl;
+    return 0;
 }

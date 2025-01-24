@@ -113,5 +113,5 @@ int main(){
      int lab[N][N];
     wczytajlabirynt(lab);
     wypiszlabirynt(lab);
-    droga(lab,0,0,1,a,b);
+    droga(lab,a,b);
 }

@@ -5,8 +5,14 @@
 #include <fstream>
 #include <stack>
 #include <iomanip>
+#include <queue>
 using namespace std;
 const int N=20;
+
+struct pole{
+int w,k;
+};
+
 
 void wczytajlabirynt(int lab[][N]){
     string s;
@@ -39,21 +45,50 @@ void wypiszlabirynt(int lab[][N]){
         }
     }
 
-bool droga(int lab [][N],int w,int k, int x, int &w1, int &k1){
-    lab[w][k]=x;
-    if(w==0 || w==N-1 || k==0 || k==N-1) {
-        w1=w; k1=k;
-        return true;}
+bool droga(int lab [][N],pole p1, pole &p2 ){
+int w,k;
+bool wyjscie=false;
+queue <pole> q;
+q.push(p1);
+lab[p1.w][p1.k]=1;
+while(wyjscie && !q.empty()){
+p2=q.front();
+q.pop();
+w=p2.w;
+k=p2.k;
+if(w==0||w==N-1||k==0||k==N-1){
+    wyjscie=true;
+}  
+else 
+{
+    if(lab[w-1][k]==0){
+    lab[w-1][k]=lab[w][k]+1;
+    p2.w=w-1;
+    p2.k=k;
+    q.push(p2);
+}
+    if(lab[w+1][k]==0){
+    lab[w+1][k]=lab[w][k]+1;
+    p2.w=w-1;
+    p2.k=k;
+    q.push(p2);
+}
+    if(lab[w][k+1]==0){
+    lab[w][k+1]=lab[w][k]+1;
+    p2.w=w-1;
+    p2.k=k;
+    q.push(p2);
+}
+    if(lab[w][k-1]==0){
+    lab[w][k-1]=lab[w][k]+1;
+    p2.w=w-1;
+    p2.k=k;
+    q.push(p2);
+}
 
-
-        if(lab[w-1][k]==0 && droga(lab,w-1,k,x+1,w1,k1)) return true;
-        if(lab[w+1][k]==0 && droga(lab,w+1,k,x+1,w1,k1)) return true;
-        if(lab[w][k-1]==0 && droga(lab,w,k-1,x+1,w1,k1)) return true;
-        if(lab[w][k+1]==0 && droga(lab,w,k+1,x+1,w1,k1)) return true;
-
-        return false;
-    }
-
+}   
+}
+}
 
 void oznaczdroge(int lab[][N],int w,int k){
     int x=lab[w][k];

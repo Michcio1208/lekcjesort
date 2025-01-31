@@ -45,7 +45,7 @@ cout<<"Krok "<<i<<" usuniety element: "<<*it<<endl;
 it=lista.erase(it);
 if(it==lista.end()) it=lista.begin();
 }
-
+cout<<"Ostatni element: "<<*it<<endl;
 
 
 

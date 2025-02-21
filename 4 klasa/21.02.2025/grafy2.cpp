@@ -35,6 +35,7 @@ for(int i=0;i<tab.size();i++){
     for(int j=0;j<tab[i].size();j++){
         cout<<tab[i][j]<<" ";
     }
+    cout<<endl;
 }
 
 

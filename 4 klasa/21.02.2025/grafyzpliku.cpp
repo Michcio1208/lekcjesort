@@ -24,7 +24,7 @@ we.close();
 }
 
 void DFS(int w1, tgraf &graf, vector<bool> &odwiedzone){
-    cout<<"odwiedzony wierzchołek"<<w1<<endl;
+    cout<<"odwiedzony wierzchołek "<<w1<<endl;
     odwiedzone[w1]=true;
     for(int i=0;i<graf[w1].size();i++){
         int w2=graf[w1][i];

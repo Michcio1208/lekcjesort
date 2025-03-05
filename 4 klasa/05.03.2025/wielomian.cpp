@@ -25,6 +25,14 @@ float y=A[0], z=1;
     }
     return y;
 }
+int Horner(vector<float> &A, float x){
+    int n = A.size()-1;
+    float y=A[n];
+    for(int i = n-1; i >= 0; i--){
+        y = y*x + A[i];
+    }
+    return y;
+}
 
 int main(){
 
@@ -34,7 +42,7 @@ int x;
 cout<<"x: ";
 cin>>x;
 cout<<"W("<<x<<") = "<<W(A,x)<<endl;
-
+cout<<"W("<<x<<") = "<<Horner(A,x)<<endl;
 
 
 

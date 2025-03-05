@@ -34,6 +34,15 @@ int Horner(vector<float> &A, float x){
     return y;
 }
 
+int oblicz(vector<float> &A){
+    int n = A.size()-1;
+    float y=A[n];
+    for(int i = n-1; i >= 0; i--){
+        y = y*2 + A[i];
+    }
+    return y;
+}
+
 int main(){
 
 vector<float> A;
@@ -43,6 +52,7 @@ cout<<"x: ";
 cin>>x;
 cout<<"W("<<x<<") = "<<W(A,x)<<endl;
 cout<<"W("<<x<<") = "<<Horner(A,x)<<endl;
+
 
 
 

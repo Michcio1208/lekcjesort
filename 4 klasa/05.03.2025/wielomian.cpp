@@ -41,7 +41,7 @@ int oblicz(int A[], int n){
     return w;
 }}
 
-int main(){
+int main(){/*
 int B[7]={1,0,1,1,0,1,1};
 vector<float> A;
 CzytajWielomian(A);
@@ -54,8 +54,22 @@ cin>>n;
 cout<<"W("<<x<<") = "<<W(A,x)<<endl;
 cout<<"W("<<x<<") = "<<Horner(A,x)<<endl;
 cout<<"Liczba dziesitena to: "<<oblicz(B,n)<<endl;
+*/
 
-
+int x,n;
+long long y,tmp;
+cout<<"podaj podstawe: potegi: ";
+cin>>x;
+cout<<"podaj wykladnik: ";
+cin>>n;
+tmp=x;
+y=1;
+while(n>0){
+    if(n%2==1){
+        y*=tmp;
+    }
+    tmp*=tmp;
+    n/=2;
 
 
 }

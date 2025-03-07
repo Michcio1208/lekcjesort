@@ -20,6 +20,4 @@ cin>>b;
 cout<<"NWD("<<a<<","<<b<<") = "<<NWD(a,b)<<endl;
 
 
-
-
 }

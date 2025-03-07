@@ -69,7 +69,8 @@ while(n>0){
         y*=tmp;
     }
     tmp*=tmp;
-    n/=2;
-
-
+    n/=2;}
+if(y>0){
+    cout<<"wynik: "<<y<<endl;
+}
 }

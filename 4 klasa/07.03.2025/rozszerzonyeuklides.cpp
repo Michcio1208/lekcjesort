@@ -5,27 +5,29 @@
 #include <stack>
 using namespace std;
 
-int NWDroz(int a, int b, int &x, int &y){
-    if(b==0){
-        x=1;
-        y=0;
-        return a;
+int NWD(int a, int b){
+    if(b==0) return a;{
+    return(NWD(b,a%b));
     }
-    int x1,y1;
-    int d = NWDroz(b,a%b,x1,y1);
-    x=y1;
-    y=x1-(a/b)*y1;
-    return d;
 }
 
+pair<int,int> NWDroz(int a, int b){
+    if(b==0) return make_pair(1,0);
+    pair<int,int> p = NWDroz(b,a%b);
+    return make_pair(p.second,p.first-(a/b)*p.second);
+}
+    
+
+
 int main(){
-    int a, b, x, y;
-    cout << "Podaj dwie liczby: ";
+    int a, b;
+    cout << "Podaj dwie liczby calkowite: ";
     cin >> a >> b;
 
-    int d = NWDroz(a, b, x, y);
+    pair<int, int> result = NWDroz(a, b);
+    int d = NWD(a, b);
     cout << "NWD(" << a << ", " << b << ") = " << d << endl;
-    cout << "x = " << x << ", y = " << y << endl;
+    cout << "Wspolczynniki: x = " << result.first << ", y = " << result.second << endl;
 
     return 0;
 }

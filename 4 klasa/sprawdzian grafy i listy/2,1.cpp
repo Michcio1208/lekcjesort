@@ -6,9 +6,11 @@ using namespace std;
 
 void sortowanieKubełkowe(vector<string>& slowa) {
     const int liczbaKubełków = 26;
-    vector<vector<string>> kubełki(liczbaKubełków);
+    vector<vector<string> > kubełki(liczbaKubełków);
     
-    for (const string& slowo : slowa) {
+    int i = 0;
+    while (i < slowa.size()) {
+        const string& slowo = slowa[i];
         if (!slowo.empty()) {
             char pierwszaLitera = tolower(slowo[0]);
             int indeks = pierwszaLitera - 'a';
@@ -16,12 +18,22 @@ void sortowanieKubełkowe(vector<string>& slowa) {
                 kubełki[indeks].push_back(slowo);
             }
         }
+        ++i;
     }
     
     slowa.clear();
-    for (vector<string>& kubełek : kubełki) {
+    
+    i = 0;
+    while (i < liczbaKubełków) {
+        vector<string>& kubełek = kubełki[i];
         sort(kubełek.begin(), kubełek.end());
-        slowa.insert(slowa.end(), kubełek.begin(), kubełek.end());
+        
+        int j = 0;
+        while (j < kubełek.size()) {
+            slowa.push_back(kubełek[j]);
+            ++j;
+        }
+        ++i;
     }
 }
 
@@ -31,16 +43,20 @@ int main() {
     cin >> liczbaSlow;
     
     vector<string> slowa(liczbaSlow);
+    int i = 0;
     cout << "Podaj słowa do posortowania:\n";
-    for (int i = 0; i < liczbaSlow; ++i) {
+    while (i < liczbaSlow) {
         cin >> slowa[i];
+        ++i;
     }
     
     sortowanieKubełkowe(slowa);
     
     cout << "Po sortowaniu:\n";
-    for (const string& slowo : slowa) {
-        cout << slowo << " ";
+    i = 0;
+    while (i < slowa.size()) {
+        cout << slowa[i] << " ";
+        ++i;
     }
     cout << "\n";
     

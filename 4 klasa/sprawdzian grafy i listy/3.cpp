@@ -12,7 +12,7 @@ void dfs(int start, vector<vector<int>>& adj, vector<bool>& visited) {
 
     while (!s.empty()) {
         int v = s.top();
-        s.pop();
+        s.pop(); 
         for (int u : adj[v]) {
             if (!visited[u]) {
                 visited[u] = true;

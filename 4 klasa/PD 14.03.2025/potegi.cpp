@@ -1,26 +1,25 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <string>
-#include <stack>
 using namespace std;
 
-int main (){
-int x,n;
-long long y,tmp;
-cout<<"podaj podstawe: potegi: ";
-cin>>x;
-cout<<"podaj wykladnik: ";
-cin>>n;
-tmp=x;
-y=1;
-while(n>0){
-    if(n%2==1){
-        y*=tmp;
+long long potega(int x, int n) {
+    if (n == 0) return 1; 
+    if (n % 2 == 0) {
+        long long half = potega(x, n / 2);
+        return half * half;
+    } else {
+        return x * potega(x, n - 1);
     }
-    tmp*=tmp;
-    n/=2;}
-if(y>0){
-    cout<<"wynik: "<<y<<endl;
 }
+
+int main() {
+    int x, n;
+    cout << "Podaj podstawę potęgi: ";
+    cin >> x;
+    cout << "Podaj wykładnik: ";
+    cin >> n;
+    
+    long long wynik = potega(x, n);
+    cout << "Wynik: " << wynik << endl;
+    
+    return 0;
 }

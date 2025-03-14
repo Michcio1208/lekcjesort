@@ -15,7 +15,7 @@ void CzytajWielomian(vector<float> &A) {
 
 float Horner(const vector<float> &A, int n, float x) {
     if (n == 0) return A[0];
-    return x * HornerRek(A, n - 1, x) + A[n];
+    return x * Horner(A, n - 1, x) + A[n];
 }
 
 int main() {

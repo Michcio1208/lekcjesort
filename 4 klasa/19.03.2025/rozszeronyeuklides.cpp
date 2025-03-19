@@ -21,8 +21,8 @@ int RSA(int podst, int wykl, int n){
 
 
 int main(){
-ifstream we("liczby.txt");
-ofstream wy("wynik4.txt");
+ifstream we("tekst-jawny.txt");
+ofstream wy("szyfrogram.txt");
 unsigned char ch;
 int e, n;
 cout<<"podaj klucz publiczny: "<<endl;
@@ -30,7 +30,7 @@ cout<<"e= "; cin>>e;
 cout<<"n= "; cin>>n;
 
 we>>noskipws;
-while(we>>ch) wy<<RSA(ch, e, n);<<" ";
+while(we>>ch) wy<<RSA(ch, e, n)<<" ";
 we.close();
 wy.close();
 cout<<"zakonczono szyfrowanie"<<endl;
